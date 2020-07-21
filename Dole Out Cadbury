@@ -1,0 +1,56 @@
+
+import java.util.*;
+
+public class Main
+{
+	public static void main(String[] args) {
+
+Scanner x=new Scanner(System.in);
+int p=x.nextInt(); 
+int q=x.nextInt();
+int r=x.nextInt();
+int s=x.nextInt();
+	    int student=0;
+	  for(int i=p;i<=q;i++){
+	      
+	      for(int j=r; j<=s;j++){
+	          
+	          int a=i;
+	           int b=j;
+	           
+	           
+	           while(a!=1 && b!=1 && a!=b){
+	               
+	               if(a>b){
+	                   a=a-b;
+	               }
+	               else{
+	                   b=b-a;
+	               }
+	               
+	               student++;
+	               
+	           }
+	           
+	           if(a==b){
+	               
+	               student++;
+	               
+	           }
+	           
+	           else if(a==1 || b==1){
+	               
+	               student=student +Math.max(a,b);
+	               
+	           }
+}
+	  }  
+	    System.out.println(student);
+	    
+	    
+	}
+}
+
+
+
+
